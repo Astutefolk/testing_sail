@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="hamburger">
+            <img src="images/icon-menu.svg" alt="Menu">
+        </div>
+        
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.svg" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+        <!-- nav-container end -->
+        <div class="nav-auth">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="register">Register</a>
+        </div>
+    </nav>
+    <main class="main-content">
+        <div class="text-content">
+            <h1>Make remote work</h1>
+            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+            <button class="learn-more">Learn more</button>
+           
+        </div>
+        <div class="main-image">
+            <img src="images/image-hero-desktop.png" alt="Main Image">
+        </div>
+        
+    </main>
+    <div class="partner-logos">
+                <img src="images/client-audiophile.svg" alt="Partner 1">
+                <img src="images/client-databiz.svg" alt="Partner 2">
+                <img src="images/client-maker.svg" alt="Partner 3">
+                <img src="images/client-meet.svg" alt="Partner 4">
+            </div>
+            <script>
+    document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+   
+});
+
+            </script>
+</body>
+</html>

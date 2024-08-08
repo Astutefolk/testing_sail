@@ -1,0 +1,311 @@
+/* Reset som basic styles */
+body, ul, li {
+    margin: 10px 87px;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 2%;
+    
+}
+.hamburger{
+    display: none; /*  I need to make sure the hamburger didn't display on desktop view */
+}
+
+.nav-logo {
+    margin-right: 20px;
+}
+
+.nav-logo img {
+    width: 100px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    margin-left: 10px;
+    transform: translateY(-8px);
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px;
+    transition: color 0.3s;
+    font-size: 1em;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+    font-weight: bolder; 
+}
+
+.nav-auth {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-auth .login {
+    color: #040404;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: color 0.3s;
+    background: none;
+    font-weight: bold;
+    font-size: large;
+    padding: 14px 18px;
+}
+
+.nav-auth .login:hover {
+    color: #0056b3;
+}
+
+.nav-auth .register {
+    color: #000000;
+    text-decoration: none;
+    padding: 14px 18px;
+    width: 90%;
+    border: 1px solid #000000;
+    text-align: center;
+    border-radius: 20% / 30%; /* to Ensure border-radius is like the example he gave*/
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    font-size: large;
+}
+
+.nav-auth .register:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 29px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.text-content {
+    width: 90%;
+    margin-right: 0px;
+    transform: translateY(-69px); /* Added to move 39px up */
+    padding-bottom: 50px;
+}
+
+.text-content h1 {
+    font-size: 6em;
+    font-weight: bold;
+    max-width: 100%;
+    margin-top: 0%;
+    margin-bottom: 300px;
+}
+
+.text-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #666;
+    transform: translateY(49px); /* To move the p tag for now*/
+    font-weight: 600;
+    font-size: 30px;
+    max-width: 80%;
+}
+
+.learn-more {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid black;
+    padding: 25px 40px;
+    font-size: 1em;
+    border-radius: 10% / 30%; 
+    cursor: pointer;
+    width: 210px;
+    font-weight: bold;
+    font-size: 21px;
+    transition: background-color 0.3s;
+    transform: translateY(89px);
+    display: inline-block;
+}
+
+.learn-more:hover {
+    background-color: #0056b3;
+}
+
+.main-image img {
+    max-width: 100%;
+}
+
+.partner-logos {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    transform: translateY(-121px); 
+    margin-left: 15%;
+    flex-shrink: 0;
+}
+
+/* Specific adjustments */
+.nav-links li {
+    margin-left: 20px;
+}
+
+.text-content h1 {
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    margin-top: 20px;
+}
+
+.main-image img {
+    margin-left: 90px;
+}
+
+/*My Mobile responsive */
+@media (max-width: 680px) {
+    body, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .nav-container {
+        width: 100%;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        
+    }
+.nav-links > li{
+    left: 50%;
+}
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-auth {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active .nav-auth {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .nav-auth .login,
+    .nav-auth .register {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+/* DISPLAY HAMBURGER */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .main-content {
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    .text-content {
+        width: 100%;
+        transform: none;
+        text-align: center;
+    }
+
+    .text-content h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .text-content p {
+        font-size: 1em;
+        transform: none;
+    }
+
+    .learn-more {
+        transform: none;
+        width: 10%;
+        padding: 12px 23px;
+        font-size: 1em;
+        border-radius: 10% / 30%; 
+        cursor: pointer;
+        width: 143px;
+        font-weight: bold;
+        font-size: 12px;
+        transition: background-color 0.3s;
+        display: inline-block;
+    }
+
+    .learn-more:hover {
+        background-color: #0056b3;
+    }
+
+    .main-image img {
+        margin-left: 0;
+        margin-right: 0%;
+        width: 100%;
+        content: url('../images/image-hero-mobile.png');
+        margin-bottom: 5%;
+    }
+
+    .partner-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+        transform: none;
+        flex-shrink: 0;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+    
+    .partner-logos img {
+        width: 16%;
+    }
+}
